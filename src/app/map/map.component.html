@@ -1,0 +1,46 @@
+
+<div>
+<select [(ngModel)]="selectedValue" (click)="choix1()">
+  <option *ngFor="let c of choix" [ngValue]="c">{{c.name}}</option>
+</select>
+</div>
+<div>
+      <br>
+          
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng"  (mapReady)="mapReady($event)">
+  <div *ngIf="position">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</div>  
+
+<div *ngIf="dir">  
+   <agm-direction [origin]="origin1" [destination]="destination1">
+</agm-direction>
+</div>
+
+
+
+
+ <!-- <div *ngFor="let a of direction">-->
+
+<agm-marker [latitude]="35.8235112" [longitude]="10.612969300000032"  [iconUrl]="'https://img.indoclubbing.com/places/755717595678185476514150999841/stadium-night-club_120.png'"  (markerClick)="bonjour()" ></agm-marker>
+
+</agm-map>
+
+</div>
+
+
+
+
+
+                      <div class="icons">
+                          <a routerLinkActive="active"  href="https://www.facebook.com/alphapartnerstunisia/"><i class="fa fa-facebook"></i></a>
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                          <a href=""><i class="fa fa-github"></i></a>
+                      </div>
+           
+
+            <br>
+              
