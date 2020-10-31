@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GetdataService} from '../getdata.service';
+import {Player} from '../Models/Player';
 
 @Component({
   selector: 'app-stade',
@@ -9,8 +10,9 @@ import {GetdataService} from '../getdata.service';
 export class StadeComponent implements OnInit {
   //Goalkeeper
   addplayer = false;
-  allpayer: String[] = ['', '', '', '', '', '', '', '', '', '', ''];
-  allpayerMatch: String[] = ['', '', '', '', '', '', '', '', '', '', ''];
+  search = '';
+  allpayer: Player[] = [];
+  allpayerMatch = new Array();
   i: number = 1;
   scoreFormation: number[] = [0, 0, 0, 0, 0, 0, 0];
   Defender = 'Defender';
@@ -31,11 +33,9 @@ console.log('res1'+splitted[1])
 })*/
 
     this.sparql.getallplayer().subscribe((res) => {
-      //nombre of player
-      for (var i = 1; i < 13; i++) {
-        var splitted = res.results.bindings[i].c.value.split("#", 2);
-        console.log(splitted, "RES");
-        this.allpayer[i] = splitted[1];
+      for (let i = 0; i < 10000; i++) {
+        let splitted = res.results.bindings[i].c.value.split('#', 2);
+        this.allpayer.push({name: splitted[1], bool: false});
       }
     });
   }
@@ -44,15 +44,18 @@ console.log('res1'+splitted[1])
     this.addplayer = !this.addplayer;
   }
 
-  addplayerM(a: String) {
-    this.allpayerMatch[this.i] = a;
-    console.log('' + this.allpayerMatch[this.i]);
+  addplayerM(c: Player) {
+    console.log(this.i);
+    this.allpayerMatch.push(c);
+    c.bool = true;
+    console.log('49' + this.allpayerMatch[this.i]);
     this.Calculscore(this.i);
     this.i++;
   }
 
-  deleteplayerM(a: number) {
-    this.allpayerMatch[a] = '';
+  deleteplayerM(c: Player, a: number) {
+    this.allpayerMatch.splice(a, 1);
+    c.bool = false;
   }
 
   getplayrposition(player, formation: number, pos) {
@@ -62,10 +65,9 @@ console.log('res1'+splitted[1])
         '#',
         2
       );
-      if (splitted[1] == pos) {
+      if (splitted[1] === pos) {
         console.log('200 ok pos=buf" :');
         this.scoreFormation[formation] = this.scoreFormation[formation] + 10;
-        //console.log('score ='+this.scoreFormation[formation])
       }
     });
   }
@@ -139,5 +141,26 @@ console.log('res1'+splitted[1])
   }
 
   ngOnInit() {
+  }
+
+  doSearch() {
+    this.allpayer.splice(0);
+    if (this.search!= '') {
+      this.sparql.search(this.search).subscribe((res) => {
+        console.log(res);
+        // this.allpayer.push({name: res.results, bool: false});
+        for (let i = 0; i < 10000; i++) {
+          let splitted = res.results.bindings[i].c.value.split('#', 2);
+          this.allpayer.push({name: splitted[1], bool: false});
+        }
+      });
+    } else {
+      this.sparql.getallplayer().subscribe((res) => {
+        for (let i = 0; i < 10000; i++) {
+          let splitted = res.results.bindings[i].c.value.split('#', 2);
+          this.allpayer.push({name: splitted[1], bool: false});
+        }
+      });
+    }
   }
 }

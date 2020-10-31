@@ -32,11 +32,29 @@ export class GetdataService {
       .map((res) => res.json());
   }
 
+  search(v: string) {
+    console.log(v, 'v');
+    return this.http
+      .get(
+        'http://localhost:3030/Match?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0A%0D%0A PREFIX obo%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fplanettech%2Fontologies%2F2018%2F11%2Funtitled-ontology-14%23%3E%0D%0A%0D%0A' +
+        'SELECT DISTINCT ?c ?age ?nom ' +
+        'WHERE {  {?c obo:nom ?nom} ' +
+        '{?c ?subClassOf obo:Goalkeeper .} ' +
+        'UNION {?c ?subClassOf obo:Defender .} ' +
+        'UNION {?c ?subClassOf obo:Striker .} ' +
+        'UNION {?c ?subClassOf obo:Midfielder .}' +
+        'FILTER regex (lcase(?nom) , "^(' + v + ')")' +
+        '}&output=json'
+      )
+      .map((res) => res.json());
+  }
+
   getPostionofPlayer(player) {
+    console.log(player);
     return this.http
       .get(
         'http://localhost:3030/Match?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0A%0D%0A PREFIX obo%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fplanettech%2Fontologies%2F2018%2F11%2Funtitled-ontology-14%23%3E%0D%0A%0D%0ASELECT DISTINCT ?NamedIndividual WHERE {  obo:' +
-        player +
+        player.name +
         ' a ?NamedIndividual} limit 1&output=json'
       )
       .map((res) => res.json());

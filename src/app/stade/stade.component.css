@@ -4,7 +4,10 @@ body {
   font-family: "Open Sans", sans-serif;
   cursor: default;
 }
-
+header{
+  color: black;
+  font-weight: bolder;
+}
 h4 {
 	color : black !important;
 }
@@ -20,9 +23,16 @@ header {
 main {
   padding: 40px 50px;
 }
-
+.terrain{
+  background-image: url('../../assets/terrain.jpg');
+  background-size: 355px 455px;
+  width: 355px;
+  height: 455px;
+  color: white;
+  font-size: 400;
+}
 .pitch {
-  background: #26a65b;
+  background-size: 355px 455px;
   width: 355px;
   height: 455px;
   border-radius: 5px;
@@ -37,11 +47,6 @@ main {
   margin: -40px 153px;
 }
 
-.pitch .container {
-  width: 350px;
-  height: 450px;
-  border: 2px solid #eee;
-}
 
 .pitch .half {
   margin: 217px 0 0 -2px;

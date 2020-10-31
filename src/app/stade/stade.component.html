@@ -1,582 +1,244 @@
 <header>Formations possible</header>
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-9">
     <div class="row">
-      <div class="pitch">
-        <h4>3-4-2-1</h4>
-        <div class="container">
-          <div class="box1">
-            <div class="pen1">
-              <div class="pos" style="margin: 5px 17px">
-                1-{{ allpayerMatch[1] }}
-              </div>
+      <div class="col-md-4">
+        <h4 class="text-center">3-4-2-1</h4>
+        <div class="container terrain">
+          <div class="row text-center">
+            <div class="" style="width: 100%; margin-top: 20px" *ngIf="allpayerMatch[0]">
+              {{ allpayerMatch[0].name }}
             </div>
           </div>
-          <div class="pos" style="margin: 65px 90px">
-            2-{{ allpayerMatch[2] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-4 text-right" *ngIf="allpayerMatch[1]">{{ allpayerMatch[1].name }}</div>
+            <div class="col-md-4 text-center" *ngIf="allpayerMatch[2]">{{ allpayerMatch[2].name }}</div>
+            <div class="col-md-4 text-left" *ngIf="allpayerMatch[3]">{{ allpayerMatch[3].name }}</div>
           </div>
-          <div class="pos" style="margin: 65px 157px">
-            3-{{ allpayerMatch[3] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-3 text-right" *ngIf="allpayerMatch[4]">{{ allpayerMatch[4].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[5]">{{ allpayerMatch[5].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[6]">{{ allpayerMatch[6].name }}</div>
+            <div class="col-md-3 text-left" *ngIf="allpayerMatch[7]">{{ allpayerMatch[7].name }}</div>
           </div>
-          <div class="pos" style="margin: 65px 224px">
-            4-{{ allpayerMatch[4] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-6 text-right" *ngIf="allpayerMatch[8]">{{ allpayerMatch[8].name }}</div>
+            <div class="col-md-6 text-left" *ngIf="allpayerMatch[9]">{{ allpayerMatch[9].name }}</div>
           </div>
-
-          <div class="pos" style="margin: 114px 53px">
-            5-{{ allpayerMatch[5] }}
-          </div>
-          <div class="pos" style="margin: 114px 126px">
-            6-{{ allpayerMatch[6] }}
-          </div>
-          <div class="pos" style="margin: 114px 186px">
-            7-{{ allpayerMatch[7] }}
-          </div>
-          <div class="pos" style="margin: 114px 258px">
-            8-{{ allpayerMatch[8] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="text-center" *ngIf="allpayerMatch[10]">{{ allpayerMatch[10].name }}</div>
           </div>
 
-          <div class="pos" style="margin: 165px 90px">
-            9-{{ allpayerMatch[9] }}
-          </div>
-          <div class="pos" style="margin: 165px 222px">
-            10-{{ allpayerMatch[10] }}
-          </div>
-
-          <div class="pos" style="margin: 198px 157px">
-            11-{{ allpayerMatch[11] }}
-          </div>
-
-          <div class="poss" style="margin: 250px 120px">
+          <div class="poss" *ngIf="allpayerMatch.length == 11" style="position: absolute; top: 300px; left: 120px">
             RESULT: {{ scoreFormation[1] }}
           </div>
-
-          <div class="half"></div>
-          <div class="box2">
-            <div class="pen2"></div>
-          </div>
         </div>
       </div>
-      <!--3421-->
 
-      <div class="pitch">
-        <h4>4-4-2</h4>
-        <div class="container">
-          <div class="box1">
-            <div class="pen1">
-              <div class="pos" style="margin: 5px 15px">
-                1-{{ allpayerMatch[1] }}
-              </div>
+      <div class="col-md-4">
+        <h4 class="text-center">4-4-2</h4>
+        <div class="container terrain">
+          <div class="row text-center">
+            <div class="" style="width: 100%; margin-top: 20px" *ngIf="allpayerMatch[0]">
+              {{ allpayerMatch[0].name }}
             </div>
           </div>
-          <div class="pos" style="margin: 65px 53px">
-            2-{{ allpayerMatch[2] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-3 text-right" *ngIf="allpayerMatch[1]">{{ allpayerMatch[1].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[2]">{{ allpayerMatch[2].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[3]">{{ allpayerMatch[3].name }}</div>
+            <div class="col-md-3 text-left" *ngIf="allpayerMatch[4]">{{ allpayerMatch[4].name }}</div>
           </div>
-          <div class="pos" style="margin: 65px 126px">
-            3-{{ allpayerMatch[3] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-3 text-right" *ngIf="allpayerMatch[5]">{{ allpayerMatch[5].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[6]">{{ allpayerMatch[6].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[7]">{{ allpayerMatch[7].name }}</div>
+            <div class="col-md-3 text-left" *ngIf="allpayerMatch[8]">{{ allpayerMatch[8].name }}</div>
           </div>
-          <div class="pos" style="margin: 65px 186px">
-            4-{{ allpayerMatch[4] }}
-          </div>
-          <div class="pos" style="margin: 65px 258px">
-            5-{{ allpayerMatch[5] }}
-          </div>
-
-          <div class="pos" style="margin: 130px 53px">
-            6-{{ allpayerMatch[6] }}
-          </div>
-          <div class="pos" style="margin: 130px 126px">
-            7-{{ allpayerMatch[7] }}
-          </div>
-          <div class="pos" style="margin: 130px 186px">
-            8-{{ allpayerMatch[8] }}
-          </div>
-          <div class="pos" style="margin: 130px 258px">
-            9-{{ allpayerMatch[9] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-6 text-right" *ngIf="allpayerMatch[9]">{{ allpayerMatch[9].name }}</div>
+            <div class="col-md-6 text-left" *ngIf="allpayerMatch[10]">{{ allpayerMatch[10].name }}</div>
           </div>
 
-          <div class="pos" style="margin: 197px 126px">
-            10-{{ allpayerMatch[10] }}
-          </div>
-          <div class="pos" style="margin: 197px 186px">
-            11-{{ allpayerMatch[11] }}
-          </div>
-          <div class="poss" style="margin: 250px 120px">
+          <div class="poss" *ngIf="allpayerMatch.length == 11" style="position: absolute; top: 300px; left: 120px">
             RESULT: {{ scoreFormation[2] }}
           </div>
-
-          <div class="half"></div>
-          <div class="box2">
-            <div class="pen2"></div>
-          </div>
         </div>
       </div>
-      <!--442-->
 
-      <div class="pitch">
-        <h4>3-5-2(3)</h4>
-        <div class="container">
-          <div class="box1">
-            <div class="pen1">
-              <div class="pos" style="margin: 5px 15px">
-                1-{{ allpayerMatch[1] }}
-              </div>
+      <div class="col-md-4">
+        <h4 class="text-center">3-5-2</h4>
+        <div class="container terrain">
+          <div class="row text-center">
+            <div class="" style="width: 100%; margin-top: 20px" *ngIf="allpayerMatch[0]">
+              {{ allpayerMatch[0].name }}
             </div>
           </div>
-          <div class="pos" style="margin: 65px 90px">
-            2-{{ allpayerMatch[2] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-4 text-right" *ngIf="allpayerMatch[1]">{{ allpayerMatch[1].name }}</div>
+            <div class="col-md-4 text-center" *ngIf="allpayerMatch[2]">{{ allpayerMatch[2].name }}</div>
+            <div class="col-md-4 text-center" *ngIf="allpayerMatch[3]">{{ allpayerMatch[3].name }}</div>
           </div>
-          <div class="pos" style="margin: 65px 157px">
-            3-{{ allpayerMatch[3] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-2 col-md-offset-1 text-right" *ngIf="allpayerMatch[4]"  style="margin-top: 5px">{{ allpayerMatch[4].name }}</div>
+            <div class="col-md-2 text-center"  *ngIf="allpayerMatch[5]">{{ allpayerMatch[5].name }}</div>
+            <div class="col-md-2 text-center"  style="margin-top: 5px" *ngIf="allpayerMatch[6]">{{ allpayerMatch[6].name }}</div>
+            <div class="col-md-2 text-center" *ngIf="allpayerMatch[7]">{{ allpayerMatch[7].name }}</div>
+            <div class="col-md-2 text-left"  style="margin-top: 5px" *ngIf="allpayerMatch[8]">{{ allpayerMatch[8].name }}</div>
           </div>
-          <div class="pos" style="margin: 65px 224px">
-            4-{{ allpayerMatch[4] }}
-          </div>
-
-          <div class="pos" style="margin: 114px 104px">
-            5-{{ allpayerMatch[5] }}
-          </div>
-          <div class="pos" style="margin: 114px 210px">
-            6-{{ allpayerMatch[6] }}
-          </div>
-
-          <div class="pos" style="margin: 145px 50px">
-            7-{{ allpayerMatch[7] }}
-          </div>
-          <div class="pos" style="margin: 160px 157px">
-            8-{{ allpayerMatch[8] }}
-          </div>
-          <div class="pos" style="margin: 145px 264px">
-            9-{{ allpayerMatch[9] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-6 text-right" *ngIf="allpayerMatch[9]">{{ allpayerMatch[9].name }}</div>
+            <div class="col-md-6 text-left" *ngIf="allpayerMatch[10]">{{ allpayerMatch[10].name }}</div>
           </div>
 
-          <div class="pos" style="margin: 198px 126px">
-            10-{{ allpayerMatch[10] }}
-          </div>
-          <div class="pos" style="margin: 198px 186px">
-            11-{{ allpayerMatch[11] }}
-          </div>
-          <div class="poss" style="margin: 250px 120px">
+          <div class="poss" *ngIf="allpayerMatch.length == 11" style="position: absolute; top: 300px; left: 120px">
             RESULT: {{ scoreFormation[3] }}
-          </div>
-
-          <div class="half"></div>
-          <div class="box2">
-            <div class="pen2"></div>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
-      <!--352(3)-->
-      <div class="pitch">
-        <h4>4-3-3(4)</h4>
-        <div class="container">
-          <div class="box1">
-            <div class="pen1">
-              <div class="pos" style="margin: 5px 15px">
-                1-{{ allpayerMatch[1] }}
-              </div>
+      <div class="col-md-4">
+        <h4 class="text-center">4-3-3</h4>
+        <div class="container terrain">
+          <div class="row text-center">
+            <div class="" style="width: 100%; margin-top: 20px" *ngIf="allpayerMatch[0]">
+              {{ allpayerMatch[0].name }}
             </div>
           </div>
-          <div class="pos" style="margin: 65px 53px">
-            2-{{ allpayerMatch[2] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-3 text-right" *ngIf="allpayerMatch[1]">{{ allpayerMatch[1].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[2]">{{ allpayerMatch[2].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[3]">{{ allpayerMatch[3].name }}</div>
+            <div class="col-md-3 text-left" *ngIf="allpayerMatch[4]">{{ allpayerMatch[4].name }}</div>
           </div>
-          <div class="pos" style="margin: 65px 126px">
-            3-{{ allpayerMatch[3] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-4 text-right" *ngIf="allpayerMatch[5]">{{ allpayerMatch[5].name }}</div>
+            <div class="col-md-4 text-center" *ngIf="allpayerMatch[6]">{{ allpayerMatch[6].name }}</div>
+            <div class="col-md-4 text-left" *ngIf="allpayerMatch[7]">{{ allpayerMatch[7].name }}</div>
           </div>
-          <div class="pos" style="margin: 65px 186px">
-            4-{{ allpayerMatch[4] }}
-          </div>
-          <div class="pos" style="margin: 65px 258px">
-            5-{{ allpayerMatch[5] }}
-          </div>
-
-          <div class="pos" style="margin: 145px 50px">
-            6-{{ allpayerMatch[6] }}
-          </div>
-          <div class="pos" style="margin: 145px 157px">
-            7-{{ allpayerMatch[7] }}
-          </div>
-          <div class="pos" style="margin: 145px 264px">
-            8-{{ allpayerMatch[8] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-4 text-right" *ngIf="allpayerMatch[8]">{{ allpayerMatch[8].name }}</div>
+            <div class="col-md-4 text-center" *ngIf="allpayerMatch[9]">{{ allpayerMatch[9].name }}</div>
+            <div class="col-md-4 text-left" *ngIf="allpayerMatch[10]">{{ allpayerMatch[10].name }}</div>
           </div>
 
-          <div class="pos" style="margin: 198px 60px">
-            9-{{ allpayerMatch[9] }}
-          </div>
-          <div class="pos" style="margin: 198px 157px">
-            10-{{ allpayerMatch[10] }}
-          </div>
-          <div class="pos" style="margin: 198px 260px">
-            11-{{ allpayerMatch[11] }}
-          </div>
-          <div class="poss" style="margin: 250px 120px">
+          <div class="poss" *ngIf="allpayerMatch.length == 11" style="position: absolute; top: 300px; left: 120px">
             RESULT: {{ scoreFormation[4] }}
           </div>
-
-          <div class="half"></div>
-          <div class="box2">
-            <div class="pen2"></div>
-          </div>
         </div>
       </div>
 
-      <div class="pitch">
-        <h4>5-3-2(5)</h4>
-        <div class="container">
-          <div class="box1">
-            <div class="pen1">
-              <div class="pos" style="margin: 5px 15px">
-                1-{{ allpayerMatch[1] }}
-              </div>
+      <div class="col-md-4">
+        <h4 class="text-center">5-3-2</h4>
+        <div class="container terrain">
+          <div class="row text-center">
+            <div class="" style="width: 100%; margin-top: 20px" *ngIf="allpayerMatch[0]">
+              {{ allpayerMatch[0].name }}
             </div>
           </div>
-
-          <div class="pos" style="margin: 65px 104px">
-            2-{{ allpayerMatch[2] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-2 col-md-offset-1 text-right" *ngIf="allpayerMatch[1]"  style="margin-top: 5px">{{ allpayerMatch[1].name }}</div>
+            <div class="col-md-2 text-center"  *ngIf="allpayerMatch[2]">{{ allpayerMatch[2].name }}</div>
+            <div class="col-md-2 text-center"  style="margin-top: 5px" *ngIf="allpayerMatch[3]">{{ allpayerMatch[3].name }}</div>
+            <div class="col-md-2 text-center" *ngIf="allpayerMatch[4]">{{ allpayerMatch[4].name }}</div>
+            <div class="col-md-2 text-left"  style="margin-top: 5px" *ngIf="allpayerMatch[5]">{{ allpayerMatch[5].name }}</div>
           </div>
-          <div class="pos" style="margin: 65px 210px">
-            3-{{ allpayerMatch[3] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-3 text-right" *ngIf="allpayerMatch[6]">{{ allpayerMatch[6].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[7]">{{ allpayerMatch[7].name }}</div>
+            <div class="col-md-3 text-left" *ngIf="allpayerMatch[8]">{{ allpayerMatch[8].name }}</div>
           </div>
-          <div class="pos" style="margin: 80px 50px">
-            4-{{ allpayerMatch[4] }}
-          </div>
-          <div class="pos" style="margin: 90px 157px">
-            5-{{ allpayerMatch[5] }}
-          </div>
-          <div class="pos" style="margin: 80px 264px">
-            6-{{ allpayerMatch[6] }}
-          </div>
-
-          <div class="pos" style="margin: 145px 50px">
-            7-{{ allpayerMatch[7] }}
-          </div>
-          <div class="pos" style="margin: 145px 157px">
-            8-{{ allpayerMatch[8] }}
-          </div>
-          <div class="pos" style="margin: 145px 264px">
-            9-{{ allpayerMatch[9] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-6 text-right" *ngIf="allpayerMatch[9]">{{ allpayerMatch[9].name }}</div>
+            <div class="col-md-6 text-left" *ngIf="allpayerMatch[10]">{{ allpayerMatch[10].name }}</div>
           </div>
 
-          <div class="pos" style="margin: 198px 140px">
-            10-{{ allpayerMatch[10] }}
-          </div>
-          <div class="pos" style="margin: 198px 210px">
-            11-{{ allpayerMatch[11] }}
-          </div>
-          <div class="poss" style="margin: 250px 120px">
+          <div class="poss" *ngIf="allpayerMatch.length == 11" style="position: absolute; top: 300px; left: 120px">
             RESULT: {{ scoreFormation[5] }}
           </div>
-
-          <div class="half"></div>
-          <div class="box2">
-            <div class="pen2"></div>
-          </div>
         </div>
       </div>
 
-      <div class="pitch">
-        <h4>5-4-1(6)</h4>
-        <div class="container">
-          <div class="box1">
-            <div class="pen1">
-              <div class="pos" style="margin: 5px 15px">
-                1 -{{ allpayerMatch[1] }}
-              </div>
+      <div class="col-md-4">
+        <h4 class="text-center">5-4-1</h4>
+        <div class="container terrain">
+          <div class="row text-center">
+            <div class="" style="width: 100%; margin-top: 20px" *ngIf="allpayerMatch[0]">
+              {{ allpayerMatch[0].name }}
             </div>
           </div>
-
-          <div class="pos" style="margin: 65px 104px">
-            2-{{ allpayerMatch[2] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-2 col-md-offset-1 text-right" *ngIf="allpayerMatch[1]">{{ allpayerMatch[1].name }}</div>
+            <div class="col-md-2 text-center" *ngIf="allpayerMatch[2]">{{ allpayerMatch[2].name }}</div>
+            <div class="col-md-2 text-center" *ngIf="allpayerMatch[6]">{{ allpayerMatch[3].name }}</div>
+            <div class="col-md-2 text-center" *ngIf="allpayerMatch[4]">{{ allpayerMatch[4].name }}</div>
+            <div class="col-md-2 text-left" *ngIf="allpayerMatch[5]">{{ allpayerMatch[5].name }}</div>
           </div>
-          <div class="pos" style="margin: 65px 210px">
-            3 -{{ allpayerMatch[3] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="col-md-3 text-right" *ngIf="allpayerMatch[6]">{{ allpayerMatch[6].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[7]">{{ allpayerMatch[7].name }}</div>
+            <div class="col-md-3 text-center" *ngIf="allpayerMatch[8]">{{ allpayerMatch[8].name }}</div>
+            <div class="col-md-3 text-left" *ngIf="allpayerMatch[9]">{{ allpayerMatch[9].name }}</div>
           </div>
-          <div class="pos" style="margin: 80px 50px">
-            4 -{{ allpayerMatch[4] }}
-          </div>
-          <div class="pos" style="margin: 90px 157px">
-            5 -{{ allpayerMatch[5] }}
-          </div>
-          <div class="pos" style="margin: 80px 264px">
-            6 -{{ allpayerMatch[6] }}
-          </div>
-
-          <div class="pos" style="margin: 145px 50px">
-            7 -{{ allpayerMatch[7] }}
-          </div>
-          <div class="pos" style="margin: 145px 140px">
-            8 -{{ allpayerMatch[8] }}
-          </div>
-          <div class="pos" style="margin: 145px 264px">
-            9 -{{ allpayerMatch[9] }}
+          <div class="row " style="margin-top: 20px">
+            <div class="text-center" *ngIf="allpayerMatch[10]">{{ allpayerMatch[10].name }}</div>
           </div>
 
-          <div class="pos" style="margin: 145px 185px">
-            11-{{ allpayerMatch[11] }}
-          </div>
-          <div class="pos" style="margin: 198px 170px">
-            10-{{ allpayerMatch[10] }}
-          </div>
-          <div class="poss" style="margin: 250px 120px">
+          <div class="poss" *ngIf="allpayerMatch.length == 11" style="position: absolute; top: 300px; left: 120px">
             RESULT: {{ scoreFormation[6] }}
-          </div>
-
-          <div class="half"></div>
-          <div class="box2">
-            <div class="pen2"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class=" col-md-4">
-    <div class="row"></div>
-    <div class="row"></div>
-    <div class="row"></div>
+  <div class=" col-md-3">
     <table>
+      <tr class="btn-group">
+        <input type="text" [(ngModel)]="search" (keyup)="doSearch()" placeholder="Rechercher">
+      </tr>
       <tr>
-        <!--    table-->
         <td>
-          <div>
-            <h1 style="color: white; background-color: rgb(100, 125, 0)">
-              List of Player
-            </h1>
+            <h2 style="color: white; background-color: rgb(100, 125, 0)">
+              All Players
+            </h2>
             <table class="table">
-              <tr style="color: green">
-                <td>-----Name----</td>
-                <td>Add to List Match</td>
-              </tr>
-              <tr>
-                <td>{{ allpayer[1] }}</td>
+              <tr *ngFor="let c of allpayer">
+                <td>{{ c.name }}</td>
                 <td>
                   <button
+                    *ngIf="c.bool == false && (allpayerMatch.length < 11)"
                     class="btn btn-primary"
-                    (click)="addplayerM(allpayer[1])"
-                  >
-                    add
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>{{ allpayer[2] }}</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    (click)="addplayerM(allpayer[2])"
-                  >
-                    add
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>{{ allpayer[3] }}</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    (click)="addplayerM(allpayer[3])"
-                  >
-                    add
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>{{ allpayer[4] }}</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    (click)="addplayerM(allpayer[4])"
-                  >
-                    add
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>{{ allpayer[5] }}</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    (click)="addplayerM(allpayer[5])"
-                  >
-                    add
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>{{ allpayer[6] }}</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    (click)="addplayerM(allpayer[6])"
-                  >
-                    add
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>{{ allpayer[7] }}</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    (click)="addplayerM(allpayer[7])"
-                  >
-                    add
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>{{ allpayer[8] }}</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    (click)="addplayerM(allpayer[8])"
-                  >
-                    add
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>{{ allpayer[9] }}</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    (click)="addplayerM(allpayer[9])"
-                  >
-                    add
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>{{ allpayer[10] }}</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    (click)="addplayerM(allpayer[9])"
+                    (click)="addplayerM(c)"
                   >
                     add
                   </button>
                 </td>
               </tr>
             </table>
-          </div>
         </td>
 
-        <td>. .</td>
-
-        <td>
-          <div>
-            <h1 style="color: white; background-color: rgb(100, 125, 0)">
-              Select Finale List of match
-            </h1>
-            <table class="table">
-              <tr style="color: green">
-                <td>-----Position------</td>
-                <td>-----Name----</td>
-                <td>delete into List Match</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>{{ allpayerMatch[1] }}</td>
+        <td style="padding-top: 0 !important;margin-top: 0 !important;vertical-align: top;">
+            <h2 style="color: white; background-color: rgb(100, 125, 0)">
+              Line-up
+            </h2>
+            <table class="table" >
+              <tr *ngFor="let c of allpayerMatch; let i= index">
+                <td>{{i + 1}}</td>
+                <td>{{ c.name }}</td>
                 <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(1)">
-                    delete
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>{{ allpayerMatch[2] }}</td>
-                <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(2)">
-                    delete
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>{{ allpayerMatch[3] }}</td>
-                <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(3)">
-                    delete
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>{{ allpayerMatch[4] }}</td>
-                <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(4)">
-                    delete
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>{{ allpayerMatch[5] }}</td>
-                <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(5)">
-                    delete
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>{{ allpayerMatch[6] }}</td>
-                <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(6)">
-                    delete
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>{{ allpayerMatch[7] }}</td>
-                <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(7)">
-                    delete
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>{{ allpayerMatch[8] }}</td>
-                <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(8)">
-                    delete
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>{{ allpayerMatch[9] }}</td>
-                <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(9)">
-                    delete
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>{{ allpayerMatch[10] }}</td>
-                <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(10)">
-                    delete
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>{{ allpayerMatch[11] }}</td>
-                <td>
-                  <button class="btn btn-danger" (click)="deleteplayerM(11)">
+                  <button class="btn btn-danger" (click)="deleteplayerM(c, i)">
                     delete
                   </button>
                 </td>
               </tr>
             </table>
-          </div>
         </td>
       </tr>
     </table>
   </div>
+<!--  <div class="row">-->
+<!--    <div class="col-md-9">-->
+<!--    </div>-->
+<!--  </div>-->
 </div>
