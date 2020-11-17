@@ -39,6 +39,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#work_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#work_in"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -54,6 +60,22 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#age">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#capacite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#capacite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Stade"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#agent"/>
     </owl:DatatypeProperty>
     
 
@@ -79,6 +101,14 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#prenom">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#teamName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#teamName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
     </owl:DatatypeProperty>
     
 
@@ -280,6 +310,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Stade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Stade"/>
+    
+
+
     <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Striker -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Striker">
@@ -291,6 +327,12 @@
     <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#agent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#agent"/>
     
 
 
@@ -341,6 +383,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Barcelone">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
+        <teamName>Barcelone</teamName>
     </owl:NamedIndividual>
     
 
@@ -349,6 +392,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Bayern">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
+        <teamName>Bayern</teamName>
     </owl:NamedIndividual>
     
 
@@ -405,6 +449,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Esperance">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
+        <teamName>Esperance</teamName>
     </owl:NamedIndividual>
     
 
@@ -425,6 +470,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Juventus">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
+        <teamName>Juventus</teamName>
     </owl:NamedIndividual>
     
 
@@ -493,6 +539,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Sampadoria">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
+        <teamName>Sampadoria</teamName>
     </owl:NamedIndividual>
     
 
@@ -541,6 +588,24 @@
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</age>
         <nationnalité>Japanese</nationnalité>
         <nom>Yushida</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#rades -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#rades">
+        <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Stade"/>
+        <capacite rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000</capacite>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#touhemi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#touhemi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#agent"/>
+        <work_in rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#rades"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
