@@ -8,9 +8,9 @@ import {Player} from '../Models/Player';
   styleUrls: ['./stade.component.css'],
 })
 export class StadeComponent implements OnInit {
-  //Goalkeeper
   addplayer = false;
   search = '';
+  teams = [];
   allpayer: Player[] = [];
   allpayerMatch = new Array();
   i: number = 1;
@@ -19,29 +19,22 @@ export class StadeComponent implements OnInit {
   Striker = 'Striker';
   Goalkeeper = 'Goalkeeper';
   Midfielder = 'Midfielder';
+  teamSelected: '';
 
   constructor(public sparql: GetdataService) {
-    //	this.Calculscore()
-    /*this.getplayrposition('bagded',1,'Striker')
-  	this.sparql.getSpark().subscribe(res=>{
-console.log('res'+res.results.bindings[3].subject.value)
-var splitted = res.results.bindings[3].subject.value.split("#", 2);
-console.log('res1'+splitted[1])
-/*this.sparql.getGoalkeeper().subscribe(res=>{
-	this.Goalkeeper=res
-})
-})*/
-
     this.sparql.getallplayer().subscribe((res) => {
       for (let i = 0; i < 10000; i++) {
         const nom = res.results.bindings[i].nom.value;
-        this.allpayer.push({name: nom , bool: false});
+        this.allpayer.push({name: nom, bool: false});
       }
     });
-  }
+    this.sparql.getTeams().subscribe((res) => {
 
-  addplayer1() {
-    this.addplayer = !this.addplayer;
+      for (let i = 0; i < 10000; i++) {
+        const nom = res.results.bindings[i].teamName.value;
+        this.teams.push({name: nom, bool: false});
+      }
+    });
   }
 
   addplayerM(c: Player) {
@@ -63,7 +56,6 @@ console.log('res1'+splitted[1])
         '#',
         2
       );
-      console.log(splitted, pos , '69')
       if (splitted[1] === pos) {
         console.log('200 ok pos=buf" :');
         this.scoreFormation[formation] = this.scoreFormation[formation] + 10;
@@ -144,12 +136,32 @@ console.log('res1'+splitted[1])
 
   doSearch() {
     this.allpayer.splice(0);
-    if (this.search!= '') {
+    if (this.search != '') {
       this.sparql.search(this.search).subscribe((res) => {
         console.log(res);
         // this.allpayer.push({name: res.results, bool: false});
         for (let i = 0; i < 10000; i++) {
           const nom = res.results.bindings[i].nom.value;
+          this.allpayer.push({name: nom, bool: false});
+        }
+      });
+    } else {
+      this.sparql.getallplayer().subscribe((res) => {
+        for (let i = 0; i < 10000; i++) {
+          let splitted = res.results.bindings[i].c.value.split('#', 2);
+          this.allpayer.push({name: splitted[1], bool: false});
+        }
+      });
+    }
+  }
+
+  doSearchByTeam() {
+    if (this.teamSelected !== '') {
+      this.sparql.getallplayerByTeam(this.teamSelected).subscribe((res) => {
+        console.log(this.teamSelected, 'team selected');
+        this.allpayer.splice(0);
+        for (let i = 0; i < 10000; i++) {
+          const nom = res.results.bindings[i].playerName.value;
           this.allpayer.push({name: nom, bool: false});
         }
       });
