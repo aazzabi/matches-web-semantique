@@ -34,8 +34,8 @@ console.log('res1'+splitted[1])
 
     this.sparql.getallplayer().subscribe((res) => {
       for (let i = 0; i < 10000; i++) {
-        let splitted = res.results.bindings[i].c.value.split('#', 2);
-        this.allpayer.push({name: splitted[1], bool: false});
+        const nom = res.results.bindings[i].nom.value;
+        this.allpayer.push({name: nom , bool: false});
       }
     });
   }
@@ -45,10 +45,8 @@ console.log('res1'+splitted[1])
   }
 
   addplayerM(c: Player) {
-    console.log(this.i);
     this.allpayerMatch.push(c);
     c.bool = true;
-    console.log('49' + this.allpayerMatch[this.i]);
     this.Calculscore(this.i);
     this.i++;
   }
@@ -65,6 +63,7 @@ console.log('res1'+splitted[1])
         '#',
         2
       );
+      console.log(splitted, pos , '69')
       if (splitted[1] === pos) {
         console.log('200 ok pos=buf" :');
         this.scoreFormation[formation] = this.scoreFormation[formation] + 10;
@@ -150,8 +149,8 @@ console.log('res1'+splitted[1])
         console.log(res);
         // this.allpayer.push({name: res.results, bool: false});
         for (let i = 0; i < 10000; i++) {
-          let splitted = res.results.bindings[i].c.value.split('#', 2);
-          this.allpayer.push({name: splitted[1], bool: false});
+          const nom = res.results.bindings[i].nom.value;
+          this.allpayer.push({name: nom, bool: false});
         }
       });
     } else {

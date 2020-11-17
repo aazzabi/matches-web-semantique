@@ -29,6 +29,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#plays_for -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#plays_for">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -42,7 +52,9 @@
 
     <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#age -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#age"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#age">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Player"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -58,13 +70,16 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#nom">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Player"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#prenom -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#prenom"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#prenom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Player"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -273,6 +288,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
+    
+
+
     <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#man_of_the_match -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#man_of_the_match">
@@ -296,6 +317,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Alaba">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Defender"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Bayern"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
         <nom>Alaba</nom>
         <prenom>david</prenom>
@@ -307,9 +329,26 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Badrane">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Defender"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Esperance"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
         <nationnalité>Algerian</nationnalité>
         <nom>Badrane</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Barcelone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Barcelone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Bayern -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Bayern">
+        <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
     </owl:NamedIndividual>
     
 
@@ -318,6 +357,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Ben_Chrifia">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Goalkeeper"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Esperance"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
         <nationnalité>Tunisian</nationnalité>
         <nom>Ben Chrifia</nom>
@@ -329,6 +369,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Buffon">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Goalkeeper"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Juventus"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</age>
         <nationnalité>Italian</nationnalité>
         <nom>Buffon</nom>
@@ -340,6 +381,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Busquets">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Midfielder"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Esperance"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</age>
         <nationnalité>Spanish</nationnalité>
         <nom>Busquets</nom>
@@ -351,9 +393,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Chaalali">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Midfielder"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Esperance"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</age>
         <nationnalité>Tunisian</nationnalité>
         <nom>Chalaali</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Esperance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Esperance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
     </owl:NamedIndividual>
     
 
@@ -362,9 +413,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Hummels">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Defender"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Bayern"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
         <nationnalité>German</nationnalité>
         <nom>Hummels</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Juventus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Juventus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
     </owl:NamedIndividual>
     
 
@@ -373,6 +433,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Khenissi">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Striker"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Esperance"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</age>
         <nationnalité>Tunisian</nationnalité>
         <nom>Khenissi</nom>
@@ -384,6 +445,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Kimmich">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Midfielder"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Bayern"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</age>
         <nationnalité>Tunisian</nationnalité>
         <nom>Kimmich</nom>
@@ -395,6 +457,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Lewandowski">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Striker"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Bayern"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</age>
         <nationnalité>Polska</nationnalité>
         <nom>Lewandowski</nom>
@@ -406,6 +469,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Neuer">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Goalkeeper"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Bayern"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</age>
         <nationnalité>German</nationnalité>
         <nom>Neuer</nom>
@@ -417,9 +481,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Ouattara">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Striker"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Esperance"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</age>
         <nationnalité>Ivoirien</nationnalité>
         <nom>Ouattara</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Sampadoria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Sampadoria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Team"/>
     </owl:NamedIndividual>
     
 
@@ -428,6 +501,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Suarez">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Striker"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Barcelone"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</age>
         <nationnalité>Uruguay</nationnalité>
         <nom>Suarez</nom>
@@ -439,6 +513,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Xavi">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Midfielder"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Barcelone"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</age>
         <nationnalité>Spanish</nationnalité>
         <nom>Xavi</nom>
@@ -450,6 +525,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Yakouuubi">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Defender"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Esperance"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</age>
         <nationnalité>Tunisian</nationnalité>
         <nom>Ya39oubii</nom>
@@ -461,6 +537,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Yushida">
         <rdf:type rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Defender"/>
+        <plays_for rdf:resource="http://www.semanticweb.org/planettech/ontologies/2018/11/untitled-ontology-14#Sampadoria"/>
         <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</age>
         <nationnalité>Japanese</nationnalité>
         <nom>Yushida</nom>
